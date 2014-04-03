@@ -35,7 +35,7 @@ usable for embedded systems) or event higher level languages.
 - Manual memory management, but by default smart pointers are used, no garbage
   collector.
 - Supply safe-easy-to-use primitives such as pointers, arrays, strings,
-  collections in general etc, which are nearly are as efficient as their C
+  collections in general etc, which are nearly as efficient as their C
   counterparts. That includes having literals of those
 - Low level code as in C still possible if the above is not efficient after
   all for certain program parts
@@ -79,7 +79,7 @@ guide for the following guidelines.
 * KISS. Only few people are interested in delving into language details. Most
   just want to use the language. That is especially true in the industry, and I
   want EF to be applicable for embedded systems.
-* For to be successful on embedded, the produced binary must not contain much
+* To be successful on embedded, the produced binary must not contain much
   overhead (size)
 * One thing has only one responsibility
  ** Applies also to keywords / operators in EF
@@ -230,10 +230,10 @@ Much less implicit conversions than C++.
 == Code chunks
 
 === (Named) Methods
-For now same as functions, just defined within a class. Maybe use keyword
-+meth+ instead of +func+. That also makes documentation more easy. I.e. terms
-used in documentation correspond more to terms used in code / in the syntax of
-the language.
+For now same as functions, just defined within a class. Maybe use keyword +meth+
+instead of +func+. That also makes documentation easier. I.e. terms used in
+documentation correspond more to terms used in code / in the syntax of the
+language.
 
 === (Named) Functions
 A named lambda. That should be visible in some way from the syntax. 
@@ -265,7 +265,7 @@ paramdeclexpr = typeexpr 'var identifier
 An anonymous aka unnamed function. An unnamed closure which makes no
 references to environment.
 
-Can they be templetizized? 
+Can they be templatized?
 
 ----------------------------------------------------------------------
 foo.times() i++;
@@ -292,12 +292,12 @@ template<T> times() yields() -> T | e.g. 5.times { print "hello" }
 An unnamed method. 
 
 === Closures
-A closure is any (named or anonymous does not matter) function which closes
+A closure is any (named or anonymous, does not matter) function which closes
 over the environment in which it was defined. This means that it can access
 variables not in its parameter list. See also
 http://stackoverflow.com/questions/220658/what-is-the-difference-between-a-closure-and-a-lambda
 
-Can they be templetizized? 
+Can they be templatized?
 
 === Contracts
 See D. For all types of code chunks.
@@ -422,9 +422,9 @@ that case which also forces that global operator to be private.
 See D
 
 === Deletion of ctor, dtor, assignment
-Instead making those private, which has the disadvantage that for methods of
+Instead of making those private, which has the disadvantage that for methods of
 the same class the compiler doesn't say anything, only the linker, delete
-them. I think C++11 also has this feature. For convenience, also give an short
+them. I think C++11 also has this feature. For convenience, also give a short
 whatever to delete a group for often occurring use-cases
 
 copy ctor and assignment operator for classes not intended to be copied in any
